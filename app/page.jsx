@@ -4,12 +4,14 @@ import { useState } from "react";
 import NavBar from "./components/Navbar";
 import Card from "./components/Card";
 import HomePage_section1 from "./homePage/homePage_section1";
+import HomePage_section2 from "./homePage/homePage_section2";
 
 export default function Home() {
   return (
     <>
       <NavBar />
       <HomePage_section1 />
+      <HomePage_section2 />
       {/* <Card
         title="Création d'un playermodel avec un script !"
         theme="Modélisation 3D"

@@ -6,7 +6,7 @@ import Particles from "@/components/magicui/particles";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function HomePage_section1() {
-  const [color, setColor] = useState("#1d3269");
+  const [color, setColor] = useState("#FFFFFF");
 
   return (
     <>

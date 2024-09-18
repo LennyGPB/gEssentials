@@ -19,6 +19,7 @@ module.exports = {
     extend: {
       colors: {
         blue: "#2B4999",
+        blackessentials: "#131212",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +58,8 @@ module.exports = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        10: "10px",
+        40: "40px",
       },
       keyframes: {
         "accordion-down": {
