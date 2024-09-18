@@ -1,6 +1,6 @@
 "use client";
 
-import Card from "../components/Card";
+import Card from "../Card";
 
 export default function HomePage_section2() {
   return (
@@ -10,7 +10,9 @@ export default function HomePage_section2() {
           Nos dernières formations :
         </h1>
 
-        <article className="flex justify-center mt-10 mb-10 flex-wrap">
+        <article className="flex justify-center mt-12 gap-14 mb-10 flex-wrap">
+          <Card />
+          <Card />
           <Card />
         </article>
       </section>

@@ -3,8 +3,8 @@
 import { useState } from "react";
 import NavBar from "./components/Navbar";
 import Card from "./components/Card";
-import HomePage_section1 from "./homePage/homePage_section1";
-import HomePage_section2 from "./homePage/homePage_section2";
+import HomePage_section1 from "./components/homePage/homePage_section1";
+import HomePage_section2 from "./components/homePage/homePage_section2";
 
 export default function Home() {
   return (

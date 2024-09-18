@@ -32,13 +32,13 @@ export default function Card({ title, theme, text }) {
 
         <a
           href="/d"
-          className="absolute p-2 bg-blue uppercase rounded-lg bottom-[-16px] tracking-widest"
+          className="absolute p-2 bg-blue uppercase rounded-lg bottom-[-16px] tracking-widest z-20"
         >
           Voir la formation
         </a>
 
         <Particles
-          className="absolute inset-0"
+          className="absolute inset-0 z-10"
           quantity={50}
           ease={80}
           color={color}
