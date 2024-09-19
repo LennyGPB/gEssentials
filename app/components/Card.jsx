@@ -16,7 +16,7 @@ export default function Card({ title, theme, text }) {
         </button>
       </div> */}
 
-      <article className="relative flex flex-col bg-blackessentials justify-start items-center border border-white text-white w-[500px] h-[245px] rounded-tl-10 rounded-br-40 rounded-tr-40 rounded-bl-10 shadow-md shadow-white">
+      <article className="relative flex flex-col bg-gradient-to-br from-blackgradient to-blackgradient2 justify-start items-center border border-white text-white w-[500px] h-[245px] rounded-tl-10 rounded-br-40 rounded-tr-40 rounded-bl-10 shadow-md shadow-white">
         <p className="text-3xl tracking-widest my-3">TITRE FORMATIONS</p>
 
         <div className="flex gap-2 mb-5 uppercase">
