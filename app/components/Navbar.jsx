@@ -1,6 +1,10 @@
-import Image from "next/image";
+"use client";
+
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function NavBar() {
+  const { data: session, status } = useSession();
+
   return (
     <>
       <nav className="flex justify-between items-center py-1 px-12 text-white">
@@ -25,15 +29,25 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="/discord" className="bg-blue p-2 rounded-md">
+            <button
+              type="button"
+              onClick={() => signIn("discord")}
+              className="bg-blue p-2 rounded-md"
+            >
               Se connecter
-            </a>
+            </button>
           </li>
-          <li>
-            <a href="/discord" className="bg-blue p-2 rounded-md">
-              S'inscrire
-            </a>
-          </li>
+          {session && (
+            <li>
+              <button
+                type="button"
+                onClick={() => signOut()}
+                className="bg-red-500 p-2 rounded-md"
+              >
+                Se déconnecter
+              </button>
+            </li>
+          )}
         </ul>
       </nav>
     </>

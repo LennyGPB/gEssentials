@@ -1,6 +1,7 @@
+"use client";
+//import Particles from "@/components/magicui/particles";
 import Image from "next/image";
-import Particles from "@/components/magicui/particles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Card({ title, theme, text }) {
   const [color, setColor] = useState("#FFFFFF");
@@ -28,13 +29,13 @@ export default function Card({ title, theme, text }) {
           Voir la formation
         </a>
 
-        <Particles
+        {/* <Particles
           className="absolute inset-0 z-10"
           quantity={50}
           ease={80}
           color={color}
           refresh
-        />
+        /> */}
       </article>
     </>
   );
