@@ -32,7 +32,7 @@ export default function formationsPage_section1() {
                             
                                 <div className="flex items-center gap-20 my-5 uppercase">
                                     <p className="bg-blue px-2 rounded-lg">Prix : 10 €</p>
-                                    <a className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
+                                    <a href="/d" className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
                                     <p className="bg-blue px-2 rounded-lg">By Jin</p>
                                 </div>
                         </div>
@@ -40,12 +40,6 @@ export default function formationsPage_section1() {
                     
                     <img src="../images/gessentials.png" className="max-w-96 max-h-96"></img>
                 </div>
-                {/* <article className="flex justify-center mt-10 gap-14 mb-10 flex-wrap">
-                    <CardForma />
-                    <CardForma />
-                    <CardForma />
-                    <CardForma />
-                </article>  */}
 
                 <Particles
                 className="absolute inset-0 z-[-1]"

@@ -30,7 +30,7 @@ export default function Card({ title, theme, text }) {
 
             <div className="flex items-center gap-80 my-5 uppercase">
                 <p className="bg-blue px-2 rounded-lg">Prix : 10 €</p>
-                <a className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
+                <a href="/d" className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
                 <p className="bg-blue px-2 rounded-lg">By Jin</p>
             </div>
 
