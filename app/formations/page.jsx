@@ -7,7 +7,6 @@ export default function Formation() {
   return (
     <>
       <NavBar />
-      <h1>dfqsdqs</h1>
       <FormationsPage_section1 />
     </>
   );
