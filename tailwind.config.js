@@ -27,6 +27,7 @@ module.exports = {
         foreground: "hsl(var(--foreground))",
         blackgradient: 'rgba(255, 255, 255, 0.03)',
         blackgradient2: 'rgba(255, 255, 255, 0)',
+        grey: 'rgba(255,255,255, 0.05)',
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
