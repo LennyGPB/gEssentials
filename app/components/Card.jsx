@@ -1,6 +1,7 @@
-import Image from "next/image";
+"use client";
+
 import Particles from "@/components/magicui/particles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Card({ title, theme, text }) {
   const [color, setColor] = useState("#FFFFFF");
