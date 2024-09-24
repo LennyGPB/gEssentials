@@ -5,12 +5,6 @@ import { useMemo } from "react";
 
 export default function NavBar() {
     const { data: session } = useSession();
-
-    // Log uniquement si la session change
-    useMemo(() => {
-        console.log("NavBar rendered", session);
-    }, [session]);
-
     return (
         <nav className="flex justify-between items-center py-1 px-12 text-white">
             <a href="/" className="w-20 h-20">
@@ -55,14 +49,12 @@ export default function NavBar() {
                         </li>
 
                         {session.user.roles && session.user.roles.length > 0 && (
-                            <li className="flex flex-col items-start">
-                                <p className="text-gray-300 font-semibold">Rôles :</p>
-                                <ul className="list-disc ml-4">
-                                    {session.user.roles.map((role, index) => (
-                                        <li key={index} className="text-gray-300">{role}</li>
-                                    ))}
-                                </ul>
+                            <li className="flex items-center">
+                                {session.user.roles.map((role, index) => (
+                                    <p className="flex items-center text-gray-300 font-semibold">{role}</p>
+                                ))}
                             </li>
+
                         )}
                         
                         <li>

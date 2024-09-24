@@ -2,10 +2,15 @@
 
 import Particles from "@/components/magicui/particles";
 import { useEffect, useState } from "react";
+import { useSession } from "next-auth/react";
 import CardForma from "../CardForma";
 
 export default function formationsPage_section1() {
+    const { data: session } = useSession();
     const [color, setColor] = useState("#FFFFFF");
+
+    const userRole = session?.user?.roles?.[0] || "";
+
     return (
         <>
             <section className="mt-52">
@@ -30,11 +35,18 @@ export default function formationsPage_section1() {
                                 Minima illo eligendi ad dolorum vel rerum adipisci natus at in neque quo tempora autem consequuntur quaerat quae, ipsam aliquid porro voluptates nisi provident perspiciatis maiores inventore consequatur ex? Quo.
                                 Nesciunt, illum? Beatae tempora inventore eum minima omnis sunt cupiditate aperiam blanditiis doloribus. Consectetur delectus soluta est provident sed sint officiis error deleniti suscipit magni doloribus laboriosam, dolores facilis quibusdam!</p>
                             
-                                <div className="flex items-center gap-20 my-5 uppercase">
-                                    <p className="bg-blue px-2 rounded-lg">Prix : 10 €</p>
-                                    <a href="/d" className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
-                                    <p className="bg-blue px-2 rounded-lg">By Jin</p>
+                            <div className="flex items-center gap-20 my-5 uppercase">
+                                <p className="bg-blue px-2 rounded-lg">Prix : 10 €</p>
+                                <a href="/d" className="bg-blue p-3 rounded-lg">Prendre cette formation</a>
+                                <p className="bg-blue px-2 rounded-lg">By Jin</p>
+                            </div>
+
+                            {userRole === "💠・Gérant" && (
+                                <div className="flex items-center gap-20 mt-5">
+                                    <button className="bg-green-500 p-3 rounded-lg">Action réservée au Gérant</button>
                                 </div>
+                            )}
+
                         </div>
                     </div>
                     
