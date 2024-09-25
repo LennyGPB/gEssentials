@@ -51,7 +51,7 @@ export default function NavBar() {
                         {session.user.roles && session.user.roles.length > 0 && (
                             <li className="flex items-center">
                                 {session.user.roles.map((role, index) => (
-                                    <p className="flex items-center text-gray-300 font-semibold">{role}</p>
+                                    <p className="text-gray-300 font-semibold bg-blue rounded-full px-4 py-2">{role}</p>
                                 ))}
                             </li>
 
