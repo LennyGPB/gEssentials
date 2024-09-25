@@ -7,7 +7,6 @@ import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function HomePage_section1() {
   const [color, setColor] = useState("#FFFFFF");
-
   return (
     <>
       <section>

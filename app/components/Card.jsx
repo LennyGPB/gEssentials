@@ -1,6 +1,6 @@
 "use client";
+
 //import Particles from "@/components/magicui/particles";
-import Image from "next/image";
 import { useState } from "react";
 
 export default function Card({ title, theme, text }) {

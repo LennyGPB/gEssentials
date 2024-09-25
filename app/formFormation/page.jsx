@@ -1,13 +1,13 @@
 "use client";
 
-import FormationsPage_section1 from "../components/formationsPage/formationsPage_section1";
 import NavBar from "../components/navBar";
+import FormationsPage_section2 from "../components/formationsPage/formationsPage_section2";
 
 export default function Formation() {
   return (
     <>
       <NavBar />
-      <FormationsPage_section1 />
+      <FormationsPage_section2 />
     </>
   );
 }

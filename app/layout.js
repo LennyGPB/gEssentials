@@ -2,6 +2,7 @@
 
 import localFont from "next/font/local";
 import "./globals.css";
+import GlobalAudio from "./components/GlobalAudio";
 import { SessionProvider } from "next-auth/react";
 
 const geistSans = localFont({
@@ -18,11 +19,14 @@ const geistMono = localFont({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <SessionProvider>{children}</SessionProvider>
-      </body>
+      <SessionProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+          <GlobalAudio />
+        </body>
+      </SessionProvider>
     </html>
   );
 }
