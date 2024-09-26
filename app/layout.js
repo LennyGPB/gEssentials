@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
         <head>
-        <meta name="description" content="Vous êtes ici, sur le site de gEssentials !" />
+            <meta name="description" content="Vous êtes ici, sur le site de gEssentials !" />
         </head>
         <SessionProvider>
             <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>

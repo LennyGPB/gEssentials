@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Formation {
+  id_formation Int      @id @default(autoincrement())
+  titre        String   @db.VarChar(50)
+  description  String   @db.Text
+  auteur       String   @db.VarChar(50)
+  prix         Decimal  @db.Decimal(15, 2)
+  image_url    String?  @db.VarChar(50)
+  categorie    String   @db.VarChar(50)
+  type         String   @db.VarChar(50) // Vocal ou Ecrit
+}
