@@ -50,7 +50,7 @@ export default function formationsPage_section1() {
                         </div>
                     </div>
                     
-                    <img src="../images/gessentials.png" className="max-w-96 max-h-96"></img>
+                    <img src="../images/gessentials.webp" className="max-w-96 max-h-96"></img>
                 </div>
 
                 <Particles

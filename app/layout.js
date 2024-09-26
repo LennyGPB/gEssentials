@@ -4,6 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import GlobalAudio from "./components/GlobalAudio";
 import { SessionProvider } from "next-auth/react";
+import { useEffect } from "react";
+import { metadata } from "./metadata";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -17,14 +19,21 @@ const geistMono = localFont({
 });
 
 export default function RootLayout({ children }) {
+    useEffect(() => {
+        document.title = metadata.title;
+    }, []);
+
   return (
-    <html lang="en">
-      <SessionProvider>
-        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-          {children}
-          <GlobalAudio />
-        </body>
-      </SessionProvider>
+    <html lang="fr">
+        <head>
+        <meta name="description" content="Vous êtes ici, sur le site de gEssentials !" />
+        </head>
+        <SessionProvider>
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+            {children}
+            <GlobalAudio />
+            </body>
+        </SessionProvider>
     </html>
   );
 }

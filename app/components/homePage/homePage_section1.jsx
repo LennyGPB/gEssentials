@@ -11,7 +11,7 @@ export default function HomePage_section1() {
     <>
       <section>
         <div className="flex justify-center items-center text-white flex-col pt-10">
-          <h1 className="text-center  tracking-widest text-8xl pt-32">
+          <h1 className="text-center tracking-widest text-8xl pt-32">
             gESSENTIALS
           </h1>
 

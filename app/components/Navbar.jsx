@@ -8,7 +8,7 @@ export default function NavBar() {
     return (
         <nav className="flex justify-between items-center py-1 px-12 text-white">
             <a href="/" className="w-20 h-20">
-                <img src="../images/gessentials.png" alt="gessentials logo" />
+                <img src="../images/gessentials.webp" alt="gessentials logo" />
             </a>
 
             <ul className="flex gap-7 uppercase tracking-widest items-center">
@@ -61,7 +61,7 @@ export default function NavBar() {
                             <button
                                 type="button"
                                 onClick={() => signOut()}
-                                className="bg-red-500 p-2 rounded-md"
+                                className="bg-red-700 p-2 rounded-md"
                             >
                                 Se déconnecter
                             </button>
