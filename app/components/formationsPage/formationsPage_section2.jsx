@@ -1,7 +1,7 @@
 "use client";
 
 import Particles from "@/components/magicui/particles";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useSession } from "next-auth/react";
 import CardForma from "../CardForma";
 
