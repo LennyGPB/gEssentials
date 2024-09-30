@@ -16,8 +16,8 @@ export default async function handler(req, res) {
       }
 
       try {
-        const { titre, description, auteur, prix, categorie, type } = req.body;
-        const image = req.file;
+        const { titre, description, auteur, prix, categorie, type } = req.body; // Récupère les données du formulaire
+        const image = req.file; // Récupère l'image uploadée
 
         const newFormation = await prisma.formation.create({
           data: {
@@ -25,7 +25,7 @@ export default async function handler(req, res) {
             description,
             auteur,
             prix,
-            image_url: `/uploads/${image.filename}`,
+            image_url: `/uploads/${image.filename}`, // Stocke le chemin de l'image
             categorie,
             type,
           },
@@ -33,7 +33,7 @@ export default async function handler(req, res) {
 
         res.status(200).json({
           message: "Formation créée avec succès",
-          formation: newFormation,
+          formation: newFormation, // Retourne la formation créée
         });
       } catch (error) {
         console.error(error);
