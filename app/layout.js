@@ -2,7 +2,7 @@
 
 import localFont from "next/font/local";
 import "./globals.css";
-import GlobalAudio from "./components/GlobalAudio";
+import GlobalAudio from "../components/shared/GlobalAudio";
 import { SessionProvider } from "next-auth/react";
 
 const geistSans = localFont({

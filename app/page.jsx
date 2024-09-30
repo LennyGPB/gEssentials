@@ -1,9 +1,9 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import NavBar from "./components/navBar";
-import HomePage_section1 from "./components/homePage/homePage_section1";
-import HomePage_section2 from "./components/homePage/homePage_section2";
+import NavBar from "../components/shared/Navbar";
+import HomePage_section1 from "../components/shared/homePage/homePage_section1";
+import HomePage_section2 from "../components/shared/homePage/homePage_section2";
 
 export default function Home() {
   const [isPlaying, setIsPlaying] = useState(false);
