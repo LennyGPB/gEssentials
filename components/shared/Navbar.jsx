@@ -6,24 +6,33 @@ import { useMemo } from "react";
 export default function NavBar() {
   const { data: session } = useSession();
   return (
-    <nav className="flex justify-between items-center py-1 px-12 text-white">
+    <nav className="flex justify-between items-center py-3 px-12 text-white">
       <a href="/" className="w-20 h-20">
         <img src="../images/gessentials.png" alt="gessentials logo" />
       </a>
 
       <ul className="flex gap-7 uppercase tracking-widest items-center">
         <li>
-          <a href="/formations" className="hover:text-gray-400">
+          <a
+            href="/formations"
+            className="hover:text-gray-400 transition duration-300"
+          >
             Nos Formations
           </a>
         </li>
         <li>
-          <a href="/avis" className="hover:text-gray-400">
+          <a
+            href="/avis"
+            className="hover:text-gray-400 transition duration-300"
+          >
             Avis
           </a>
         </li>
         <li>
-          <a href="/discord" className="hover:text-gray-400">
+          <a
+            href="/discord"
+            className="hover:text-gray-400 transition duration-300"
+          >
             Notre discord
           </a>
         </li>
@@ -32,7 +41,7 @@ export default function NavBar() {
             <button
               type="button"
               onClick={() => signIn("discord")}
-              className="bg-blue-500 p-2 rounded-md"
+              className="bg-gradient-to-r from-blue to-blue-600 uppercase p-2 rounded-md"
             >
               Se connecter
             </button>
@@ -40,7 +49,7 @@ export default function NavBar() {
         ) : (
           <>
             <li className="flex items-center">
-              <p className="mr-2">Pseudo : {session.user.global_name}</p>
+              <p className="mr-2">{session.user.global_name}</p>
               <img
                 src={session.user.image}
                 className="rounded-full w-8 h-8"

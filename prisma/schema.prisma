@@ -19,4 +19,5 @@ model Formation {
   image_url    String?  @db.VarChar(50)
   categorie    String   @db.VarChar(50)
   type         String   @db.VarChar(50) // Vocal ou Ecrit
+  createdAt    DateTime @default(now())
 }

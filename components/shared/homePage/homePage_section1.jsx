@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
-//import Particles from "@/components/magicui/particles";
+import Particles from "../../magicui/particles";
 import { RoughNotation, RoughNotationGroup } from "react-rough-notation";
 
 export default function HomePage_section1() {
@@ -49,13 +49,13 @@ export default function HomePage_section1() {
           </svg>
         </div>
 
-        {/* <Particles
+        <Particles
           className="absolute inset-0 z-[-1]"
           quantity={300}
           ease={80}
           color={color}
           refresh
-        /> */}
+        />
       </section>
     </>
   );

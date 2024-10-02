@@ -1,41 +1,55 @@
 "use client";
 
-//import Particles from "@/components/magicui/particles";
-import { useState } from "react";
+import Particles from "../magicui/particles";
+import { useEffect, useState } from "react";
+import formationsPage_section1 from "./formationsPage/formationsPage_section1";
 
-export default function Card({ title, theme, text }) {
+export default function Card({ titre, categorie, type, description, id }) {
   const [color, setColor] = useState("#FFFFFF");
+  const [formations, SetFormations] = useState([]);
+
+  useEffect(() => {
+    const fetchFormations = async () => {
+      try {
+        const response = await fetch("/api/getFormations");
+        const data = await response.json();
+        SetFormations(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchFormations();
+  }, []);
 
   return (
     <>
-      <article className="relative flex flex-col bg-gradient-to-br from-blackgradient to-blackgradient2 justify-start items-center border border-white text-white w-[500px] h-[245px] rounded-tl-10 rounded-br-40 rounded-tr-40 rounded-bl-10 shadow-md shadow-white">
-        <p className="text-3xl tracking-widest my-3">TITRE FORMATIONS</p>
-
+      <article className="relative flex flex-col bg-gradient-to-br from-blackgradient to-blackgradient2 justify-start items-center border border-white text-white w-[500px] h-[245px] rounded-tl-10 rounded-br-40 rounded-tr-40 rounded-bl-10 transition duration-500">
+        <p className="text-3xl tracking-widest my-3">{titre}</p>
         <div className="flex gap-2 mb-5 uppercase">
-          <p className="bg-blue px-1 rounded-lg">Modélisation 3D</p>
-          <p className="bg-blue px-1 rounded-lg">Animation 3D</p>
+          <p className="bg-gradient-to-r from-blue to-blue-600 px-2 rounded-lg tracking-widest">
+            {categorie}
+          </p>
+          <p className="bg-gradient-to-r from-blue to-blue-600 px-2 rounded-lg tracking-widest">
+            {type}
+          </p>
         </div>
-
         <p className="tracking-wide mb-3 px-7 text-center text-ellipsis overflow-hidden">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid dolor
-          nobis eligendi porro assumenda veniam quo voluptatum voluptate alias
-          nobis eligendi porro assumenda veniam quo voluptatum voluptate alias
+          {description}
         </p>
-
         <a
-          href="/d"
+          href={`/formation/${id}`}
           className="absolute p-2 bg-blue uppercase rounded-lg bottom-[-16px] tracking-widest z-20"
         >
           Voir la formation
         </a>
-
-        {/* <Particles
+        <Particles
           className="absolute inset-0 z-10"
           quantity={50}
           ease={80}
           color={color}
           refresh
-        /> */}
+        />
       </article>
     </>
   );
